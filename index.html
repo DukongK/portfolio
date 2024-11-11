@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>풀스크린4_포폴</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- 구글폰트 "Julius Sans One" -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <!-- header 상단 메뉴 확인하고 none걸기 -->
+    <header>
+      <!-- <ul id="header">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">profile</a></li>
+                <li><a href="#">LOGO</a></li>
+                <li><a href="#">WEB1</a></li>
+                <li><a href="#">WEB2</a></li>
+                <li><a href="#">WEB3</a></li>
+                <li><a href="#">WEB4</a></li>
+                <li><a href="#">ILLUST</a></li>
+                <li><a href="#">DESIGN</a></li>
+                <li><a href="#">PAINTING</a></li>
+                <li><a href="#">FOOTER</a></li>
+            </ul> -->
+      <div class="header_main">
+        <div class="main_line1"></div>
+        <div class="main_line2"></div>
+        <div class="main_point"><img src="img/logo_w.svg" /></div>
+        <div class="main_1"></div>
+        <div class="main_2"></div>
+      </div>
+    </header>
+
+    <!-- page1 home -->
+    <div id="container">
+      <section class="page1" id="con1">
+        <nav>
+          <h1>
+            <a href="index.html">
+              <img src="img/logo_r.svg" alt="logo_red" />
+            </a>
+            <a class="logo_w" href="index.html"
+              ><img src="img/logo_w.svg" alt="logo_white"
+            /></a>
+          </h1>
+          <div class="red_line"></div>
+
+          <!-- page1 hambergur_bar -->
+          <ul class="hambergur">
+            <li>
+              <div class="linebox">
+                <div class="line_y">
+                  <div class="one"></div>
+                </div>
+              </div>
+              <a href="#"> LOGO </a>
+            </li>
+            <li>
+              <div class="linebox">
+                <div class="line_y">
+                  <div class="one"></div>
+                </div>
+              </div>
+              <a href="#"> WEBSITE </a>
+            </li>
+            <li>
+              <div class="linebox">
+                <div class="line_y">
+                  <div class="one"></div>
+                </div>
+              </div>
+              <a href="#"> PORTFOLIO </a>
+            </li>
+            <li>
+              <div class="linebox">
+                <div class="line_y">
+                  <div class="one"></div>
+                </div>
+              </div>
+              <a href="https://blog.naver.com/geulam" target="blank"> BLOG </a>
+            </li>
+            <li>
+              <div class="menu_line">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- id visual main -->
+        <div id="visual">
+          <div class="visual_bg">
+            <div class="visual_me">
+              <img src="img/me2.png" alt="face" />
+              <!-- <div class="leftimg">
+                <img src="img/visual_left.png" />
+              </div> -->
+            </div>
+            <div class="visual_txt">
+              <h2>
+                TRY YOUT BEST<br />
+                RATHER THAN BE THE BEST
+              </h2>
+              <h3>최고가 되기보다는 최선을 다해라</h3>
+            </div>
+            <!-- 스크롤다운 -->
+            <div class="scroll">
+              <img class="s_img1" src="img/scroll_move.png" />
+              <img class="s_img2" src="img/scroll_arrow.png" />
+              <p>SCROLL DOWN</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- page2 profile -->
+      <section class="page2" id="con2">
+        <div class="page2_wrap">
+          <ul>
+            <li>
+              <div class="p2_txt">
+                <h2><img class="p2_logo" src="img/logo_r.svg" />을</h2>
+                <h2 class="p2_po">
+                  소개합니다<img class="p2_but" src="img/button_red.png" />
+                </h2>
+              </div>
+            </li>
+            <li>
+              <img src="img/html_icon.png" />
+              <img src="img/css_icon.png" />
+              <img src="img/jquery_icon.png" />
+              <img src="img/ps_icon.png" />
+              <img src="img/ai_icon.png" />
+              <img src="img/figma_icon.png" />
+            </li>
+          </ul>
+          <ul class="p2_txt_move">
+            <li>
+              <h2 class="pro">PROFILE</h2>
+              <h3>연완흠</h3>
+              <p>Yeon Wan Heum_</p>
+            </li>
+            <li>
+              <h3>충주공업고등학교 졸업</h3>
+              <p>건축디자인과_</p>
+            </li>
+            <li>
+              <h3>캐릭터 디자인 프리랜서</h3>
+              <p>5년(2019~2023)_</p>
+            </li>
+            <li>
+              <h3>민팃(AI개발팀 보조)</h3>
+              <p>6개월(2023.12~2024.05)_</p>
+            </li>
+            <li>
+              <h3>GTQ 1급</h3>
+              <p>2024.08.24_</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- con3 page3 logo -->
+      <section class="page3" id="con3">
+        <div class="p3wrap">
+          <!-- 가운데 로고 설명 텍스트 -->
+          <div class="p3txt">
+            <ul class="mtop">
+              <li>
+                <div class="move_txt_p3">
+                  <p class="d_red">DESIGN</p>
+                  <h2>LOGO</h2>
+                </div>
+                <div class="move_txt_p3_box">
+                  <p class="f_ma">
+                    <strong>저의 이름</strong> 앞 글자 "<strong>연</strong>"으로
+                    <strong>로고</strong>를 만들었습니다
+                  </p>
+                  <p class="blod_f">날개 모양을 연상시키는 로고입니다</p>
+                  <p class="co_777">
+                    새들은 어릴 적 부터 나는법을 터득하려고 포기하지 않고<br />날개
+                    짓을 하는 노력이 있습니다<br />저도 그만큼 열심히 날개 짓을
+                    해서<br />끊임없이 노력을 한다는 의미로 제작하였습니다
+                  </p>
+                </div>
+                <p class="c_red">COLOR</p>
+                <div class="co_wrap">
+                  <div class="box_co cotxt">
+                    <div class="co_box_r"></div>
+                    <p>FF0000</p>
+                  </div>
+                  <div class="box_co2 cotxt">
+                    <div class="co_box_k"></div>
+                    <p>222222</p>
+                  </div>
+                </div>
+                <!-- <div class="logo_s">
+                                    <img src="img/logo_s.png" />
+                                </div> -->
+
+                <div class="logo_wrap_yy">
+                  <div class="line_t"></div>
+                  <div class="line_b"></div>
+                  <div class="line_l"></div>
+                  <div class="line_r"></div>
+
+                  <ul class="logo_txt_yy">
+                    <li>
+                      <img src="img/Ellipse_1.png" />
+                      <span>&nbsp&nbsp+ ㅇ</span>
+                    </li>
+                    <li>
+                      <img src="img/Ellipse_2.png" />
+                      <span>+ ㅕ</span>
+                    </li>
+                    <li>
+                      <img src="img/Ellipse_3.png" />
+                      <span>+ ㄴ</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 로고 박스 -->
+          <div class="p3box_wrap">
+            <ul class="p3boxl">
+              <li><img src="img/logo_r.svg" /></li>
+              <li><img src="img/logo_w.svg" /></li>
+            </ul>
+            <ul class="p3boxr">
+              <li><img src="img/logo_w.svg" /></li>
+              <li><img src="img/logo_k.svg" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- con4 web site1 풀무원 -->
+
+      <section class="page4" id="con4">
+        <div class="pc4none">
+          <div class="p4_main_txt">
+            <p>DESIGN</p>
+            <h2>WEB SITE</h2>
+          </div>
+          <!-- web site4 -->
+          <div class="p4_wrap">
+            <div class="p4_img"></div>
+            <div class="p4_box_txt">
+              <div class="p4_box1">
+                <div class="p4_box2"></div>
+                <div class="p4_txt_wrap">
+                  <div class="p4_tt">
+                    <p class="p4_web_txt">WEB·DESIGN</p>
+                    <h2>toO 풀무원</h2>
+                    <p class="p4_txt_p">
+                      깨끗하게 마실 수 있는 toO 정수기<br />사이트를
+                      코딩하였습니다
+                    </p>
+                  </div>
+                  <div class="p4_t2">
+                    <p class="p4_web_txt ff">DESIGN</p>
+                    <h2>풀무원 시안</h2>
+                    <p class="p4_txt_p cf">
+                      풀무원 시안<br />디자인을 확인해보세요
+                    </p>
+                  </div>
+                  <div class="p4_t3">
+                    <p class="p4_web_txt">WEB CODING</p>
+                    <h2 class="p4_x3">풀무원 코딩</h2>
+                    <p class="p4_txt_p x2">
+                      풀무원 코딩<br />사이트를 확인해보세요
+                    </p>
+                  </div>
+                  <ul class="p4_button">
+                    <li class="p4_but1">
+                      <a href="#"><p>DESIGN</p></a>
+                    </li>
+                    <li class="p4_but2">
+                      <a href="#"><p>WEB</p></a>
+                    </li>
+                  </ul>
+                  <div class="p4_longbar">
+                    <div class="p4_long"></div>
+                    <span>100%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="p4_box2"></div> -->
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+        <!-- 모바일 풀무원 -->
+        <div class="mobile_page4">
+          <!-- mo4_wrap -->
+          <div class="mo4_main_txt">
+            <p>DESIGN</p>
+            <h2>WEB SITE</h2>
+          </div>
+          <div class="mo4_wrap">
+            <ul class="mo4_link_box">
+              <li class="link_d">
+                <a href="#"><p>DESIGN</p></a>
+              </li>
+              <li class="link_w">
+                <a href="#"><p>WEB</p></a>
+              </li>
+            </ul>
+            <div class="mo4_img">
+              <div class="mo4_txt">
+                <p class="main">WEB·DESIGN</p>
+                <h2>toO 풀무원</h2>
+                <p class="m4_p">
+                  깨끗하게 마실 수 있는 toO 정수기<br />사이트를 코딩하였습니다
+                </p>
+              </div>
+              <div class="mo4_op"></div>
+            </div>
+            <div class="mo4_box1">
+              <div class="mo4_box2"></div>
+              <p class="he">100%</p>
+              <div class="mo4_long">
+                <div class="mo4_long_bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- con5 web site2 스토리타코 -->
+      <section class="page5" id="con5">
+        <div class="pc5none">
+          <!-- web site5 -->
+          <div class="p5_wrap">
+            <div class="p5_img"></div>
+            <div class="p5_box_txt">
+              <div class="p5_box1">
+                <div class="p5_box2"></div>
+                <div class="p5_txt_wrap">
+                  <div class="p5_tt">
+                    <p class="p5_web_txt">WEB·DESIGN</p>
+                    <h2>STORY TACO</h2>
+                    <p class="p5_txt_p">
+                      또 다른 당신을 만나는 곳<br />스토리타코의 사이트를
+                      코딩하였습니다
+                    </p>
+                  </div>
+                  <div class="p5_t2">
+                    <p class="p5_web_txt ff">DESIGN</p>
+                    <h2>스토리타코 시안</h2>
+                    <p class="p5_txt_p cf">
+                      스토리타코 시안<br />디자인을 확인해보세요
+                    </p>
+                  </div>
+                  <div class="p5_t3">
+                    <p class="p5_web_txt">WEB CODING</p>
+                    <h2 class="p5_x3">스토리타코 코딩</h2>
+                    <p class="p5_txt_p x2">
+                      스토리타코 코딩<br />사이트를 확인해보세요
+                    </p>
+                  </div>
+                  <ul class="p5_button">
+                    <li class="p5_but1">
+                      <a href="#"><p>DESIGN</p></a>
+                    </li>
+                    <li class="p5_but2">
+                      <a href="#"><p>WEB</p></a>
+                    </li>
+                  </ul>
+                  <div class="p5_longbar">
+                    <div class="p5_long"></div>
+                    <span>100%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="p4_box2"></div> -->
+            </div>
+          </div>
+        </div>
+        <!-- 모바일 스토리타코 -->
+        <div class="mobile_page5">
+          <!-- mo5_wrap -->
+
+          <div class="mo5_wrap">
+            <ul class="mo5_link_box">
+              <li class="link_d">
+                <a href="#"><p>DESIGN</p></a>
+              </li>
+              <li class="link_w">
+                <a href="#"><p>WEB</p></a>
+              </li>
+            </ul>
+            <div class="mo5_img">
+              <div class="mo5_txt">
+                <p class="main">WEB·DESIGN</p>
+                <h2>STORY TACO</h2>
+                <p class="m5_p">
+                  또 다른 당신을 만나는 곳<br />스토리타코의 사이트를
+                  코딩하였습니다
+                </p>
+              </div>
+              <div class="mo5_op"></div>
+            </div>
+            <div class="mo5_box1">
+              <div class="mo5_box2"></div>
+              <p class="he">100%</p>
+              <div class="mo5_long">
+                <div class="mo5_long_bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- con6 web site3 디퓨저 -->
+      <section class="page6" id="con6">
+        <div class="pc6none">
+          <!-- web site6 -->
+          <div class="p6_wrap">
+            <div class="p6_img"></div>
+            <div class="p6_box_txt">
+              <div class="p6_box1">
+                <div class="p6_box2"></div>
+                <div class="p6_txt_wrap">
+                  <div class="p6_tt">
+                    <p class="p6_web_txt">WEB·DESIGN</p>
+                    <h2>THE 디퓨저</h2>
+                    <p class="p6_txt_p">
+                      좋은 향기가 나는 디퓨저<br />사이트를 코딩하였습니다
+                    </p>
+                  </div>
+                  <div class="p6_t2">
+                    <p class="p6_web_txt ff">DESIGN</p>
+                    <h2>THE디퓨저 시안</h2>
+                    <p class="p6_txt_p cf">
+                      THE디퓨저 시안<br />디자인을 확인해보세요
+                    </p>
+                  </div>
+                  <div class="p6_t3">
+                    <p class="p6_web_txt">WEB CODING</p>
+                    <h2 class="p6_x3">THE디퓨저 코딩</h2>
+                    <p class="p6_txt_p x2">
+                      THE디퓨저 코딩<br />사이트를 확인해보세요
+                    </p>
+                  </div>
+                  <ul class="p6_button">
+                    <li class="p6_but1">
+                      <a href="#"><p>DESIGN</p></a>
+                    </li>
+                    <li class="p6_but2">
+                      <a href="#"><p>WEB</p></a>
+                    </li>
+                  </ul>
+                  <div class="p6_longbar">
+                    <div class="p6_long"></div>
+                    <span>100%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="p4_box2"></div> -->
+            </div>
+          </div>
+        </div>
+        <!-- 모바일 디퓨저 -->
+        <div class="mobile_page6">
+          <!-- mo6_wrap -->
+
+          <div class="mo6_wrap">
+            <ul class="mo6_link_box">
+              <li class="link_d">
+                <a href="#"><p>DESIGN</p></a>
+              </li>
+              <li class="link_w">
+                <a href="#"><p>WEB</p></a>
+              </li>
+            </ul>
+            <div class="mo6_img">
+              <div class="mo6_txt">
+                <p class="main">WEB·DESIGN</p>
+                <h2>THE 디퓨저</h2>
+                <p class="m6_p">
+                  좋은 향기가 나는 THE디퓨저<br />사이트를 코딩하였습니다
+                </p>
+              </div>
+              <div class="mo6_op"></div>
+            </div>
+            <div class="mo6_box1">
+              <div class="mo6_box2"></div>
+              <p class="he">100%</p>
+              <div class="mo6_long">
+                <div class="mo6_long_bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- con7 web site4 가구 리뉴얼 -->
+      <section class="page7" id="con7">
+        <div class="pc7none">
+          <!-- web site5 -->
+          <div class="p7_wrap">
+            <div class="p7_img"></div>
+            <div class="p7_box_txt">
+              <div class="p7_box1">
+                <div class="p7_box2"></div>
+                <div class="p7_txt_wrap">
+                  <div class="p7_tt">
+                    <p class="p7_web_txt">WEB·DESIGN</p>
+                    <h2>DESK CHAIR</h2>
+                    <p class="p7_txt_p">
+                      편안하고 고급스러운 가구<br />DESK CHAIR의 사이트를 리뉴얼
+                      하였습니다
+                    </p>
+                  </div>
+                  <div class="p7_t2">
+                    <p class="p7_web_txt ff">DESIGN</p>
+                    <h2>DESK CHAIR 시안</h2>
+                    <p class="p7_txt_p cf">
+                      DESK CHAIR 시안<br />디자인을 확인해보세요
+                    </p>
+                  </div>
+                  <div class="p7_t3">
+                    <p class="p7_web_txt">WEB CODING</p>
+                    <h2 class="p7_x3">DESK CHAIR 코딩</h2>
+                    <p class="p7_txt_p x2">
+                      DESK CHAIR 코딩<br />사이트를 확인해보세요
+                    </p>
+                  </div>
+                  <ul class="p7_button">
+                    <li class="p7_but1">
+                      <a href="#"><p>DESIGN</p></a>
+                    </li>
+                    <li class="p7_but2">
+                      <a href="#"><p>WEB</p></a>
+                    </li>
+                  </ul>
+                  <div class="p7_longbar">
+                    <div class="p7_long"></div>
+                    <span>100%</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="p4_box2"></div> -->
+            </div>
+          </div>
+        </div>
+        <!-- 모바일 데스크체어 -->
+        <div class="mobile_page7">
+          <!-- mo7_wrap -->
+
+          <div class="mo7_wrap">
+            <ul class="mo7_link_box">
+              <li class="link_d">
+                <a href="#"><p>DESIGN</p></a>
+              </li>
+              <li class="link_w">
+                <a href="#"><p>WEB</p></a>
+              </li>
+            </ul>
+            <div class="mo7_img">
+              <div class="mo7_txt">
+                <p class="main">WEB·DESIGN</p>
+                <h2>DESK CHAIR</h2>
+                <p class="m7_p">
+                  편안하고 고급스러운 가구<br />DESK CHAIR의 사이트를 리뉴얼
+                  하였습니다
+                </p>
+              </div>
+              <div class="mo7_op"></div>
+            </div>
+            <div class="mo7_box1">
+              <div class="mo7_box2"></div>
+              <p class="he">100%</p>
+              <div class="mo7_long">
+                <div class="mo7_long_bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- con8 illust 자동 페이드 효과 -->
+      <section class="page8" id="con8">
+        <div class="ilust_box">
+          <!-- <div class="ilust_1"></div> -->
+          <ul class="p8_panel">
+            <li class="bg1"></li>
+            <li class="bg2"></li>
+            <li class="bg3"></li>
+            <li class="bg4"></li>
+            <li class="bg5"></li>
+            <li class="bg6"></li>
+          </ul>
+        </div>
+
+        <!-- p8 페이드 버튼 -->
+        <ul class="p8_button">
+          <li class="on">
+            <div></div>
+          </li>
+          <li><div></div></li>
+          <li><div></div></li>
+          <li><div></div></li>
+          <li><div></div></li>
+          <li><div></div></li>
+        </ul>
+        <!-- p8 페이드 다음 뒤 버튼 -->
+        <ul class="navi_bar">
+          <li class="fade_b_l">
+            <img src="img/fade_button_l.png" />
+          </li>
+          <li class="fade_b_r">
+            <img src="img/fade_button_r.png" />
+          </li>
+        </ul>
+      </section>
+
+      <!-- con9 design 자동 슬라이드 -->
+      <section class="page9" id="con9">
+        <div class="p9_main_txt">
+          <img src="img/point_red.png" />
+          <p>여러 종류의 <strong>디자인</strong>을 만나보세요</p>
+        </div>
+
+        <div class="p9_wrap_slide">
+          <div class="p9_wrap">
+            <ul class="p9_slide">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="p9_button_none">
+              <ul class="p9_button">
+                <li class="prev"><img src="img/back.png" /></li>
+                <li class="next"><img src="img/next.png" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- con10 painting 무한 옆으로 이동 반복 -->
+      <section class="page10" id="con10">
+        <!-- 그림 이미지 넣기 -->
+        <div class="c10_txt_move">
+          <img src="img/point_red.png" />
+          <p>PAINTING</p>
+        </div>
+        <!-- 이미지 크기 조절해서 가운데 맞게 하기 -->
+        <div class="p10_move">
+          <ul>
+            <li>
+              <img src="img2/p-1.png" />
+            </li>
+            <li class="down"><img src="img2/p-5.png" /></li>
+            <li><img src="img2/p-2.png" /></li>
+            <li class="down"><img src="img2/p-3.png" /></li>
+            <li><img src="img2/p-4.png" /></li>
+            <li class="down"><img src="img2/p-6.png" /></li>
+            <li><img src="img2/p-7.png" /></li>
+            <li class="down"><img src="img2/p-8.png" /></li>
+            <li><img src="img2/p-9.png" /></li>
+            <li class="down"><img src="img2/p-10.png" /></li>
+            <li><img src="img2/p-11.png" /></li>
+            <li class="down"><img src="img2/p-12.png" /></li>
+            <li><img src="img2/p-13.png" /></li>
+            <li class="down"><img src="img2/p-14.png" /></li>
+            <li>
+              <img src="img2/p-1.png" />
+            </li>
+            <li class="down"><img src="img2/p-5.png" /></li>
+            <li><img src="img2/p-2.png" /></li>
+            <li class="down"><img src="img2/p-3.png" /></li>
+            <li><img src="img2/p-4.png" /></li>
+            <li class="down"><img src="img2/p-6.png" /></li>
+            <li><img src="img2/p-7.png" /></li>
+            <li class="down"><img src="img2/p-8.png" /></li>
+            <li><img src="img2/p-9.png" /></li>
+            <li class="down"><img src="img2/p-10.png" /></li>
+            <li><img src="img2/p-11.png" /></li>
+            <li class="down"><img src="img2/p-12.png" /></li>
+            <li><img src="img2/p-13.png" /></li>
+            <li class="down"><img src="img2/p-14.png" /></li>
+            <li>
+              <img src="img2/p-1.png" />
+            </li>
+            <li class="down"><img src="img2/p-5.png" /></li>
+            <li><img src="img2/p-2.png" /></li>
+            <li class="down"><img src="img2/p-3.png" /></li>
+            <li><img src="img2/p-4.png" /></li>
+            <li class="down"><img src="img2/p-6.png" /></li>
+            <li><img src="img2/p-7.png" /></li>
+            <li class="down"><img src="img2/p-8.png" /></li>
+            <li><img src="img2/p-9.png" /></li>
+            <li class="down"><img src="img2/p-10.png" /></li>
+            <li><img src="img2/p-11.png" /></li>
+            <li class="down"><img src="img2/p-12.png" /></li>
+            <li><img src="img2/p-13.png" /></li>
+            <li class="down"><img src="img2/p-14.png" /></li>
+            <li>
+              <img src="img2/p-1.png" />
+            </li>
+            <li class="down"><img src="img2/p-5.png" /></li>
+            <li><img src="img2/p-2.png" /></li>
+            <li class="down"><img src="img2/p-3.png" /></li>
+            <li><img src="img2/p-4.png" /></li>
+            <li class="down"><img src="img2/p-6.png" /></li>
+            <li><img src="img2/p-7.png" /></li>
+            <li class="down"><img src="img2/p-8.png" /></li>
+            <li><img src="img2/p-9.png" /></li>
+            <li class="down"><img src="img2/p-10.png" /></li>
+            <li><img src="img2/p-11.png" /></li>
+            <li class="down"><img src="img2/p-12.png" /></li>
+            <li><img src="img2/p-13.png" /></li>
+            <li class="down"><img src="img2/p-14.png" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- con11 footer -->
+      <section class="page11" id="con11">
+        <div class="p11_txt">
+          <h2 class="h1d">DESIGN</h2>
+          <h2 class="mar">PORTFOLIO<img src="img/point_red.png" /></h2>
+        </div>
+
+        <div class="footer_box">
+          <div class="top_button">
+            <a href="#">
+              <img src="img/topbutton.png" />
+            </a>
+            <a href="#">
+              <img class="tok" src="img/topbutton_k.png" />
+            </a>
+          </div>
+          <div class="foter_line"></div>
+          <div class="fo_wrap">
+            <img src="img/logo_w.svg" />
+            <ul>
+              <li>
+                <div class="tel">
+                  <p>
+                    <img src="img/point_red.png" />
+                  </p>
+
+                  <p><span>TEL_</span>010 4307 2076</p>
+                  <p><span>EMALL_</span>sksmsenzhd@naver.com</p>
+                </div>
+              </li>
+              <li>
+                <a href="https://blog.naver.com/geulam" target="blank">
+                  <img src="img/blog_icon.png"
+                /></a>
+                <p>BLOG</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- navi -->
+    <ul id="navi">
+      <li>
+        <div class="line"></div>
+        <p>HOME</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>PROFILE</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>LOGO</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>WEB SITE1</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>WEB SITE2</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>WEB SITE3</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>WEB SITE4</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>ILLUST</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>DESIGN</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>PAINTING</p>
+      </li>
+      <li>
+        <div class="line"></div>
+        <p>FOOTER</p>
+      </li>
+    </ul>
+  </body>
+</html>
