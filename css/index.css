@@ -3032,7 +3032,7 @@
     width: 40px;
     height: 25px;
     position: relative;
-    z-index: 99;
+    z-index: 120;
   }
 
   .menu_line:hover .line2 {
