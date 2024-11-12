@@ -7,20 +7,20 @@ $(function () {
     // backdrop-filter: blur(6px);
     // 아래로 스크롤 조금 할 때 (if)배경 나타나고 위로 올리면 (else)배경 투명
     if (nav >= 2) {
-      $("#con1 nav").css({ "backdrop-filter": "blur(6px)" });
-      $("#con1 nav").css({ height: "100px" });
+      $("header nav").css({ "backdrop-filter": "blur(6px)" });
+      $("header nav").css({ height: "100px" });
       $(".logo_w").css({ display: "none" });
       $(".red_line").addClass("on");
     } else {
-      $("#con1 nav").css({ "background-color": "transparent" });
-      $("#con1 nav").css({ height: "80px" });
+      $("header nav").css({ "background-color": "transparent" });
+      $("header nav").css({ height: "80px" });
       $(".logo_w").css({ display: "none" });
       $(".red_line").removeClass("on");
     }
   });
 
   // header nav hover 마우스 닿았을 때 배경 변경
-  $("#con1 nav").on("mouseenter", function () {
+  $("header nav").on("mouseenter", function () {
     $(this).css({ "background-color": "#ff0000" });
     $(".logo_w").css({ display: "block" });
   });
@@ -30,12 +30,12 @@ $(function () {
   // window scrollTop >= 2 할 때 if는 배경색이 나타나고
   // 그렇지 않으면 배경색이 투명해진다
   //   그래서 위로 올릴때만 배경투명이 적용되고 아래로 2만큼 내리면 색상이 그대로 유지된다
-  $("#con1 nav").on("mouseleave", function () {
+  $("header nav").on("mouseleave", function () {
     if ($(window).scrollTop() >= 2) {
       $(this).css({ "background-color": "transparent" });
       $(".logo_w").css({ display: "none" });
     } else {
-      $("#con1 nav").css({ "background-color": "transparent" });
+      $("header nav").css({ "background-color": "transparent" });
       $(".logo_w").css({ display: "none" });
     }
     // $(this).css({ "background-color": "transparent" });
@@ -46,6 +46,21 @@ $(function () {
     $(".menu_line .line1").toggleClass("on");
     $(".menu_line .line2").toggleClass("on3");
     $(".menu_line .line3").toggleClass("on2");
+    $(".menu_wrap").fadeToggle();
+    $(".menu_list").toggleClass("on");
+  });
+
+  $(".menu_txt li").on("mouseenter", function () {
+    let menu_li = $(this).index();
+    $(".menu_txt ul li div").eq(menu_li).addClass("on");
+    $(".menu_txt ul a").addClass("on");
+    $(".menu_txt li").eq(menu_li).addClass("on");
+    $(".menu_txt ul li a").eq(menu_li).addClass("on");
+  });
+  $(".menu_txt li").on("mouseleave", function () {
+    $(".menu_txt ul li div").removeClass("on");
+    $(".menu_txt li").removeClass("on");
+    $(".menu_txt ul a").removeClass("on");
   });
 
   $(".hambergur li").on("mouseenter", function () {
@@ -71,16 +86,20 @@ $(function () {
   let total = $(".p8_panel li").length;
   console.log(total);
   let i = 0;
+
   start();
   function start() {
-    if (i == total - 1) {
-      i = 0;
-    } else {
-      i++;
-    }
+    stop = setInterval(function () {
+      if (i == total - 1) {
+        i = 0;
+      } else {
+        i++;
+      }
+      fade();
+    }, 2000);
   }
 
-  start = setInterval(function () {
+  function fade() {
     $(".p8_panel li").stop().fadeOut();
     $(".p8_panel li").eq(i).stop().fadeIn();
     $(".p8_button li").removeClass("on");
@@ -91,66 +110,39 @@ $(function () {
       .children("div")
       .stop()
       .animate({ width: "100%" }, 1000);
-    if (i == total - 1) {
-      i = 0;
-    } else {
-      i++;
-    }
-  }, 2000);
+  }
 
+  // 버튼 여러개
   $(".p8_button li").on("click", function () {
-    // clearInterval(start);
+    clearInterval(stop);
     i = $(this).index(".p8_button li");
-    $(".p8_panel li").stop().fadeOut();
-    $(".p8_panel li").eq(i).stop().fadeIn();
-    $(".p8_button li").removeClass("on");
-    $(".p8_button li").eq(i).addClass("on");
-    $(".p8_button li").children("div").stop().css({ width: "0%" });
-    $(".p8_button li")
-      .eq(i)
-      .children("div")
-      .stop()
-      .animate({ width: "100%" }, 1000);
+
+    fade();
+    start();
   });
 
   // 다음 버튼 fade
   $(".navi_bar .fade_b_r").on("click", function () {
-    // clearInterval(start);
+    clearInterval(stop);
     if (i == total - 1) {
       i = 0;
     } else {
       i++;
     }
-    $(".p8_panel li").stop().fadeOut();
-    $(".p8_panel li").eq(i).stop().fadeIn();
-    $(".p8_button li").removeClass("on");
-    $(".p8_button li").eq(i).addClass("on");
-    $(".p8_button li").children("div").stop().css({ width: "0%" });
-    $(".p8_button li")
-      .eq(i)
-      .children("div")
-      .stop()
-      .animate({ width: "100%" }, 1000);
+
     start();
+    fade();
   });
   // 이전 버튼 fade
   $(".navi_bar .fade_b_l").on("click", function () {
-    // clearInterval(start);
+    clearInterval(stop);
     if (i == 0) {
       i = total - 1;
     } else {
       i--;
     }
-    $(".p8_panel li").stop().fadeOut();
-    $(".p8_panel li").eq(i).stop().fadeIn();
-    $(".p8_button li").removeClass("on");
-    $(".p8_button li").eq(i).addClass("on");
-    $(".p8_button li").children("div").stop().css({ width: "0%" });
-    $(".p8_button li")
-      .eq(i)
-      .children("div")
-      .stop()
-      .animate({ width: "100%" }, 1000);
+
+    fade();
     start();
   });
 });
@@ -255,6 +247,16 @@ $(function () {
   let con11 = $("#con11").offset().top + baseline;
 
   // console.log(con1, con2, con3, con4);
+
+  // navibar 함수등록
+  // function navibar(){
+  //   $("#navi li div").removeClass("on");
+  //   $("#navi li div").eq(0).addClass("on");
+  //   $("#navi li p").removeClass("txton");
+  //   $("#navi li p").eq(0).addClass("txton");
+  // }
+
+  // navibar();
 
   $(window).on("scroll", function () {
     let scroll = $(this).scrollTop();
@@ -458,15 +460,15 @@ $(function () {
       });
       $(".mo6_wrap").addClass("on");
 
-      let count3 = 1;
-      stop3 = setInterval(function () {
-        count3++;
-        if (count3 > 100) {
-          clearInterval(stop3);
-        } else {
-          $(".p6_p").text(count3);
-        }
-      });
+      // let count3 = 1;
+      // stop3 = setInterval(function () {
+      //   count3++;
+      //   if (count3 > 100) {
+      //     clearInterval(stop3);
+      //   } else {
+      //     $(".p6_p").text(count3);
+      //   }
+      // });
 
       // console.log("con6입니다");
     } else if (scroll >= con7 && scroll < con8) {
@@ -519,15 +521,15 @@ $(function () {
 
       $(".mo7_wrap").addClass("on");
 
-      let count4 = 1;
-      stop4 = setInterval(function () {
-        count4++;
-        if (count4 > 100) {
-          clearInterval(stop4);
-        } else {
-          $(".p7_p").text(count4);
-        }
-      });
+      // let count4 = 1;
+      // stop4 = setInterval(function () {
+      //   count4++;
+      //   if (count4 > 100) {
+      //     clearInterval(stop4);
+      //   } else {
+      //     $(".p7_p").text(count4);
+      //   }
+      // });
 
       // console.log("con7입니다");
     } else if (scroll >= con8 && scroll < con9) {
