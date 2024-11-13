@@ -116,6 +116,7 @@
     right: 30px;
   }
 
+  /* header_main */
   .main_line1 {
     background-color: #ff0000;
     width: 2px;
@@ -179,6 +180,7 @@
   .main_point img.on {
     transform: translate(-50%, -50%) scale(1.5) rotate(-45deg);
     opacity: 0;
+    transition-delay: 0.3s;
   }
 
   .main_1 {
@@ -285,6 +287,7 @@
   header nav > ul li a {
     color: #fff;
     transition: 0.3s;
+    font-weight: bold;
   }
 
   header nav > ul li a:hover {
@@ -470,6 +473,19 @@
     position: absolute;
     left: 30px;
     bottom: -5px;
+    animation: me 1s forwards;
+    animation-delay: 1.5s;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  @keyframes me {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
   }
   .visual_txt {
     position: absolute;
@@ -477,6 +493,7 @@
     top: 60%;
     transform: translate(-50%, -50%);
     text-align: right;
+    /* overflow: hidden; */
   }
   .visual_txt h2 {
     font-size: 60px;
@@ -485,11 +502,40 @@
     background-image: linear-gradient(to left, red, orange);
     background-clip: text;
     font-family: "Julius Sans One", sans-serif;
+    transition: 1s;
+    animation: v_h2 1s forwards;
+    animation-delay: 1.5s;
+    transform-origin: right;
+    opacity: 0;
   }
+  @keyframes v_h2 {
+    0% {
+      transform: rotate(30deg) skew(32deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+
   .visual_txt h3 {
     font-size: 30px;
     color: rgba(0, 0, 0, 0.7);
     font-weight: normal;
+    animation: v_h3 1s forwards;
+    animation-delay: 1.5s;
+
+    opacity: 0;
+  }
+  @keyframes v_h3 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
 
   .leftimg {
@@ -549,6 +595,18 @@
     width: 25px;
   }
 
+  .p2_logo {
+    animation: p2_logo 2s ease-in-out infinite alternate;
+  }
+  @keyframes p2_logo {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
   /* page2 아이콘 움직임 딜레이 사용 */
   .page2 li:nth-child(2) img {
     width: 60px;
@@ -558,6 +616,7 @@
     transition: 0.8s;
     opacity: 0;
   }
+
   .page2.up li:nth-child(2) img {
     transform: translateY(0);
     opacity: 1;
@@ -680,6 +739,15 @@
   .f_ma strong {
     color: #ff0000;
     transition: 4s;
+    animation: 5s p3_c infinite linear alternate;
+  }
+  @keyframes p3_c {
+    0% {
+      color: #222;
+    }
+    100% {
+      color: #ff0000;
+    }
   }
   .f_ma strong.on {
     color: #222;
@@ -2289,7 +2357,6 @@
 
   /* page9 디자인  자동슬라이드 */
 
-  /* 글자 움직임 */
   .p9_main_txt {
     transform: translateY(80px);
     opacity: 0;
@@ -2308,14 +2375,13 @@
     margin-top: 150px;
     text-align: center;
   }
-  .page9 p {
+  .p9_main_txt p {
     font-size: 25px;
     line-height: 40px;
     margin-bottom: 30px;
   }
 
   .p9_wrap_slide {
-    /* border: 1px solid #222; */
     width: 1740px;
     overflow: hidden;
     position: relative;
@@ -2329,13 +2395,12 @@
     opacity: 1;
     transition-delay: 0.7s;
   }
-  /* p9_wrap */
+
   .p9_wrap {
     width: 500px;
     height: 500px;
   }
 
-  /* p9_slide */
   .p9_slide {
     width: 600%;
     height: 500px;
@@ -2349,9 +2414,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* width: 100%; */
     width: 20%;
     height: 100%;
+    position: relative;
   }
   .p9_slide li:nth-child(1) {
     background-image: url(../img/poster_1.jpg);
@@ -2360,7 +2425,7 @@
     background-image: url(../img/poster_2.jpg);
   }
   .p9_slide li:nth-child(3) {
-    background-image: url(../img/poster-3.png);
+    background-image: url(../img/poster-3.jpg);
   }
   .p9_slide li:nth-child(4) {
     background-image: url(../img/poster_1.jpg);
@@ -2368,8 +2433,6 @@
   .p9_slide li:nth-child(5) {
     background-image: url(../img/poster_2.jpg);
   }
-
-  /* p9_button */
 
   .p9_button {
     position: absolute;
@@ -2384,19 +2447,209 @@
     cursor: pointer;
   }
 
-  /* prev */
   .p9_button .next {
     position: absolute;
     right: 520px;
     top: -250px;
   }
 
-  /* next */
   .p9_button .prev {
     position: absolute;
     left: 520px;
     bottom: -250px;
   }
+
+  /* p9_button1 */
+  .p9_stxt {
+    /* opacity: 0; */
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+  }
+  .p9_slide li:hover .p9_stxt {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    opacity: 1;
+  }
+  .txt_9 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .p9_stxt h2 {
+    color: #fff;
+    font-size: 30px;
+  }
+  .p9_stxt p {
+    color: #fff;
+    font-size: 20px;
+  }
+  .p9_stxt a {
+    color: #fff;
+    border: 1px solid #ff0000;
+    padding: 15px 30px;
+    display: inline-block;
+  }
+
+  /* p9line */
+  .p9_line1 {
+    background-color: #ff0000;
+    width: 100%;
+    height: 1px;
+  }
+
+  /* 목업 화면 */
+
+  .modal1 {
+    background-color: #222;
+    width: 700px;
+    height: 800px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    display: none;
+  }
+
+  /* 카드 이미지 */
+  /* #con9 {
+    position: relative;
+
+}
+
+  .p9_wrap {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    gap: 50px;
+    perspective: 500px;
+    width:90%;
+    height: 600px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+
+   
+    
+  }
+  .card1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    color: #fff;
+  }
+  .front1 {
+    background-color: #999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .back1 {
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+  }
+  .card1:hover {
+    transform: rotateY(180deg);
+  }
+
+  .i1 {
+    background-image: url(../img/poster_1.jpg);
+  }
+  .i2 {
+    background-image: url(../img/poster_2.jpg);
+  }
+  .i3 {
+    background-image: url(../img/poster-3.png);
+  }
+  .i4 {
+    background-image: url(../img/poster_1.jpg);
+  }
+
+  .back1 a {
+    border: 1px solid #ff0000;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.5s;
+  }
+  .back1 a:hover {
+    background-color: #fff;
+  }
+  .back1 .v_txt:hover {
+    color: #222;
+  }
+  .back1 .v_txt {
+    color: #fff;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 25px;
+    font-family: "Julius Sans One", sans-serif;
+  }
+  .b_txt {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .b_txt h2 {
+    margin-bottom: 5px;
+  }
+
+  .b_txt img {
+    width: 20px;
+  }
+  .b_line1 {
+    background-color: purple;
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    top: 10px;
+    transition: 3s;
+  }
+
+  .b_line2 {
+    background-color: pink;
+    width: 1px;
+    height: 0%;
+    position: absolute;
+    left: 10px;
+    transition: 3s;
+  }
+
+  .b_line1.on {
+    width: 100%;
+    background-color: #ff0000;
+  }
+  .b_line2.on {
+    height: 100%;
+    background-color: #ff0000;
+  } */
 
   /* page10 painting */
 
@@ -2435,7 +2688,7 @@
     left: 50%;
     top: 40%;
     transform: translate(-50%, -90%);
-    animation: p10move 100s linear infinite;
+    animation: p10move 150s linear infinite;
   }
 
   .page10 .down {
@@ -3407,6 +3660,15 @@
   .f_ma strong {
     color: #ff0000;
     transition: 4s;
+    animation: 5s p3_c infinite linear alternate;
+  }
+  @keyframes p3_c {
+    0% {
+      color: #222;
+    }
+    100% {
+      color: #ff0000;
+    }
   }
   .f_ma strong.on {
     color: #222;
@@ -4461,7 +4723,7 @@
     background-image: url(../img/poster_2.jpg);
   }
   .p9_slide li:nth-child(3) {
-    background-image: url(../img/poster_2.png);
+    background-image: url(../img/poster-3.png);
   }
   .p9_slide li:nth-child(4) {
     background-image: url(../img/poster_1.jpg);
@@ -5269,7 +5531,21 @@
     position: absolute;
     left: 30px;
     bottom: -5px;
+    animation: me 1s forwards;
+    animation-delay: 1.5s;
+    transform: translateY(-100%);
+    opacity: 0;
   }
+  @keyframes me {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
   .visual_me img {
     width: 98%;
   }
@@ -5281,19 +5557,49 @@
     text-align: right;
   }
   .visual_txt h2 {
-    font-size: 50px;
+    /* font-size: 60px; */
+    font-size: 5vw;
     /* color: #ff0000; */
     color: transparent;
     background-image: linear-gradient(to left, red, orange);
     background-clip: text;
     font-family: "Julius Sans One", sans-serif;
+    transition: 1s;
+    animation: v_h2 1s forwards;
+    animation-delay: 1.5s;
+    transform-origin: right;
+    opacity: 0;
   }
-  .visual_txt h3 {
-    font-size: 28px;
-    color: rgba(0, 0, 0, 0.7);
-    font-weight: normal;
+  @keyframes v_h2 {
+    0% {
+      transform: rotate(30deg) skew(32deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
   }
 
+  .visual_txt h3 {
+    /* font-size: 30px; */
+    font-size: 2vw;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: normal;
+    animation: v_h3 1s forwards;
+    animation-delay: 1.5s;
+
+    opacity: 0;
+  }
+  @keyframes v_h3 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
   .leftimg {
     position: absolute;
     left: 0px;
@@ -5477,10 +5783,18 @@
   }
 
   /* strong변화 */
-
   .f_ma strong {
     color: #ff0000;
     transition: 4s;
+    animation: 5s p3_c infinite linear alternate;
+  }
+  @keyframes p3_c {
+    0% {
+      color: #222;
+    }
+    100% {
+      color: #ff0000;
+    }
   }
   .f_ma strong.on {
     color: #222;
@@ -7163,7 +7477,7 @@
     background-image: url(../img/poster_2.jpg);
   }
   .p9_slide li:nth-child(3) {
-    background-image: url(../img/poster_2.png);
+    background-image: url(../img/poster-3.png);
   }
   .p9_slide li:nth-child(4) {
     background-image: url(../img/poster_1.jpg);

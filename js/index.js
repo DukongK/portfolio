@@ -71,14 +71,25 @@ $(function () {
   });
 
   // header main box
-
-  $("header").on("mouseenter", function () {
+  $(function () {
     $(".main_point").addClass("on");
     $(".main_1").addClass("on");
     $(".main_2").addClass("on");
     $(".main_line1").addClass("on");
     $(".main_line2").addClass("on");
     $(".main_point img").addClass("on");
+  });
+
+  // card design
+  $(function () {
+    $(".card1").on("mouseenter", function () {
+      $(".b_line1").addClass("on");
+      $(".b_line2").addClass("on");
+    });
+    $(".card1").on("mouseleave", function () {
+      $(".b_line1").removeClass("on");
+      $(".b_line2").removeClass("on");
+    });
   });
 
   // page8 자동 페이드---------------------
@@ -161,6 +172,7 @@ $(function () {
       if (s_i == s_total - 1) {
         $(".p9_slide")
           .stop()
+          // -2400 왜 나왔는지 파악
           .animate({ "margin-left": "-2400px" }, function () {
             $(".p9_slide").css({ "margin-left": "0px" });
           });
@@ -170,7 +182,7 @@ $(function () {
           .stop()
           .animate({ "margin-left": -s_i * 630 });
       }
-    }, 2000);
+    }, 3000);
   }
 
   // next
@@ -181,7 +193,8 @@ $(function () {
     if (s_i == s_total - 1) {
       $(".p9_slide")
         .stop()
-        .animate({ "margin-left": "-3000px" }, function () {
+
+        .animate({ "margin-left": "-2400px" }, function () {
           $(".p9_slide").css({ "margin-left": "0px" });
         });
       s_i = 0;
@@ -200,7 +213,7 @@ $(function () {
     if (s_i < 0) {
       $(".p9_slide")
         .stop()
-        .animate({ "margin-left": "-3000px" }, function () {
+        .animate({ "margin-left": "-2400px" }, function () {
           $(".p9_slide").css({ "margin-left": "-1500px" });
         });
       s_i = 4;
