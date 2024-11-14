@@ -2488,7 +2488,7 @@
     color: #ff0000;
   }
   .redp {
-    animation: redp 3s alternate infinite;
+    animation: redp 1s alternate infinite;
   }
 
   @keyframes redp {
@@ -2558,6 +2558,8 @@
   .p9btn:hover {
     transform: rotate(180deg);
   }
+
+ 
 
   /* page10 painting */
 
