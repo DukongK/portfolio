@@ -80,18 +80,6 @@ $(function () {
     $(".main_point img").addClass("on");
   });
 
-  // card design
-  $(function () {
-    $(".card1").on("mouseenter", function () {
-      $(".b_line1").addClass("on");
-      $(".b_line2").addClass("on");
-    });
-    $(".card1").on("mouseleave", function () {
-      $(".b_line1").removeClass("on");
-      $(".b_line2").removeClass("on");
-    });
-  });
-
   // page8 자동 페이드---------------------
 
   let total = $(".p8_panel li").length;
@@ -160,69 +148,101 @@ $(function () {
 
 // p9 자동슬라이드----------------------------
 $(function () {
-  let s_total = $(".p9_slide li").length;
-  console.log(s_total);
-
-  let s_i = 0;
-  // 움직임
-  p9_start();
-  function p9_start() {
-    s_timer = setInterval(function () {
-      s_i++;
-      if (s_i == s_total - 1) {
-        $(".p9_slide")
-          .stop()
-          // -2400 왜 나왔는지 파악
-          .animate({ "margin-left": "-2400px" }, function () {
-            $(".p9_slide").css({ "margin-left": "0px" });
-          });
-        s_i = 0;
-      } else {
-        $(".p9_slide")
-          .stop()
-          .animate({ "margin-left": -s_i * 630 });
-      }
-    }, 3000);
-  }
-
-  // next
-  $(".next").on("click", function () {
-    clearInterval(s_timer);
-
-    s_i++;
-    if (s_i == s_total - 1) {
-      $(".p9_slide")
-        .stop()
-
-        .animate({ "margin-left": "-2400px" }, function () {
-          $(".p9_slide").css({ "margin-left": "0px" });
-        });
-      s_i = 0;
-    } else {
-      $(".p9_slide")
-        .stop()
-        .animate({ "margin-left": -s_i * 630 });
-    }
-    p9_start();
+  // 모달창 1
+  $(".v1").on("click", function () {
+    $(".p9_d1").fadeToggle();
+  });
+  $(".p9btn1").on("click", function () {
+    $(".p9_d1").fadeToggle();
+  });
+  // 2
+  $(".v2").on("click", function () {
+    $(".p9_d2").fadeToggle();
+  });
+  $(".p9btn2").on("click", function () {
+    $(".p9_d2").fadeToggle();
+  });
+  // 3
+  $(".v3").on("click", function () {
+    $(".p9_d3").fadeToggle();
+  });
+  $(".p9btn3").on("click", function () {
+    $(".p9_d3").fadeToggle();
+  });
+  // 4
+  $(".v4").on("click", function () {
+    $(".p9_d4").fadeToggle();
+  });
+  $(".p9btn4").on("click", function () {
+    $(".p9_d4").fadeToggle();
+  });
+  // 5
+  $(".v5").on("click", function () {
+    $(".p9_d5").fadeToggle();
+  });
+  $(".p9btn5").on("click", function () {
+    $(".p9_d5").fadeToggle();
+  });
+  // 6
+  $(".v6").on("click", function () {
+    $(".p9_d6").fadeToggle();
+  });
+  $(".p9btn6").on("click", function () {
+    $(".p9_d6").fadeToggle();
   });
 
-  // prev
-  $(".prev").on("click", function () {
-    clearInterval(s_timer);
-    s_i--;
-    if (s_i < 0) {
-      $(".p9_slide")
+  let p9_total = $(".p9_ul li").length;
+  let p9_i = 0;
+
+  p9_start();
+  function p9_start() {
+    stop = setInterval(function () {
+      $(".p9_ul")
         .stop()
-        .animate({ "margin-left": "-2400px" }, function () {
-          $(".p9_slide").css({ "margin-left": "-1500px" });
+        .animate({ "margin-left": "-650px" }, function () {
+          $(".p9_ul li:first-child").appendTo(".p9_ul");
+          $(".p9_ul").css({ "margin-left": "0px" });
         });
-      s_i = 4;
+
+      if (p9_i == p9_total - 1) {
+        p9_i = 0;
+      } else {
+        p9_i++;
+      }
+    }, 5000);
+  }
+
+  // next버튼
+  $(".next").on("click", function () {
+    $(".p9_ul")
+      .stop()
+      .animate({ "margin-left": "-650px" }, function () {
+        $(".p9_ul li:first-child").appendTo(".p9_ul");
+        $(".p9_ul").css({ "margin-left": "0px" });
+      });
+
+    if (p9_i == p9_total - 1) {
+      p9_i = 0;
     } else {
-      $(".p9_slide")
-        .stop()
-        .animate({ "margin-left": -s_i * 630 });
+      p9_i++;
     }
-    p9_start();
+  });
+
+  // back 버튼
+
+  $(".back").on("click", function () {
+    $(".p9_ul")
+      .stop()
+      .animate({ "margin-left": "650px" }, function () {
+        $(".p9_ul li:last-child").prependTo(".p9_ul");
+        $(".p9_ul").css({ "margin-left": "0px" });
+      });
+
+    if (p9_i == 0) {
+      p9_i = p9_total - 1;
+    } else {
+      p9_i--;
+    }
   });
 });
 
@@ -260,16 +280,6 @@ $(function () {
   let con11 = $("#con11").offset().top + baseline;
 
   // console.log(con1, con2, con3, con4);
-
-  // navibar 함수등록
-  // function navibar(){
-  //   $("#navi li div").removeClass("on");
-  //   $("#navi li div").eq(0).addClass("on");
-  //   $("#navi li p").removeClass("txton");
-  //   $("#navi li p").eq(0).addClass("txton");
-  // }
-
-  // navibar();
 
   $(window).on("scroll", function () {
     let scroll = $(this).scrollTop();
@@ -473,16 +483,6 @@ $(function () {
       });
       $(".mo6_wrap").addClass("on");
 
-      // let count3 = 1;
-      // stop3 = setInterval(function () {
-      //   count3++;
-      //   if (count3 > 100) {
-      //     clearInterval(stop3);
-      //   } else {
-      //     $(".p6_p").text(count3);
-      //   }
-      // });
-
       // console.log("con6입니다");
     } else if (scroll >= con7 && scroll < con8) {
       $("#navi li div").removeClass("on");
@@ -534,16 +534,6 @@ $(function () {
 
       $(".mo7_wrap").addClass("on");
 
-      // let count4 = 1;
-      // stop4 = setInterval(function () {
-      //   count4++;
-      //   if (count4 > 100) {
-      //     clearInterval(stop4);
-      //   } else {
-      //     $(".p7_p").text(count4);
-      //   }
-      // });
-
       // console.log("con7입니다");
     } else if (scroll >= con8 && scroll < con9) {
       $("#navi li div").removeClass("on");
@@ -558,14 +548,8 @@ $(function () {
       $("#navi li div").eq(8).addClass("on");
       $("#navi li p").removeClass("txton");
       $("#navi li p").eq(8).addClass("txton");
-      $(".p9_slide .p9_img1").addClass("on");
-      $(".p9_slide .p9_img2").addClass("on");
-      $(".p9_slide .p9_img3").addClass("on");
-      $(".p9_main_txt").removeClass("on");
       $(".p9_main_txt").addClass("on");
-      $(".back").addClass("on");
-      $(".next").addClass("on");
-      $(".p9_wrap_slide ").addClass("on");
+      $(".page9").addClass("on");
 
       // console.log("con9입니다");
     } else if (scroll >= con10 && scroll < con11) {
