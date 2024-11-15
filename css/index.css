@@ -2884,11 +2884,11 @@
     overflow-y: hidden;
   }
 
-  body,
+  /* body,
 html {
-  width:100%;
+
     overflow-x: hidden;
-}
+} */
   /* none */
   .hambergur li:nth-child(1),
   .hambergur li:nth-child(2),
