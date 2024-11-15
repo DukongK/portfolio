@@ -13,8 +13,15 @@ a {
     color: #222;
 }
 body,
-html {max-width:100%;
+html {
+    max-width: 100%;
     overflow-x: hidden;
 }
 
-
+body {
+    overflow: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
