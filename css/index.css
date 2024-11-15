@@ -1036,6 +1036,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+   
+ 
+    
   }
 
   /* 로고 박스 전체 크기 */
@@ -2879,7 +2882,7 @@
   }
 }
 /* ===================모바일 버전============================= */
-@media (max-width: 760px) {
+@media (max-width: 760px) and (min-width:0px){
   /* body,html {
     overflow-y: hidden;
   } */
