@@ -14,9 +14,9 @@
     display: none;
   }
   /* container */
-  body {
+  /* body {
     overflow-y: hidden;
-  }
+  } */
 
   /* page1 */
   #header {
@@ -2880,9 +2880,9 @@
 }
 /* ===================모바일 버전============================= */
 @media (max-width: 760px) {
-  body {
+  /* body,html {
     overflow-y: hidden;
-  }
+  } */
 
   /* body,
 html {
@@ -3150,6 +3150,7 @@ html {
     transition: 1s;
     height: 80px;
     backdrop-filter: blur(6px);
+  
   }
 
   header nav img {
@@ -5105,9 +5106,9 @@ html {
     display: none;
   }
   /* container */
-  body {
+  /* body {
     overflow-y: hidden;
-  }
+  } */
 
   /* page1 */
   #header {
