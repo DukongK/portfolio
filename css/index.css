@@ -2559,8 +2559,6 @@
     transform: rotate(180deg);
   }
 
- 
-
   /* page10 painting */
 
   #con10 {
@@ -2886,6 +2884,11 @@
     overflow-y: hidden;
   }
 
+  body,
+html {
+  width:100%;
+    overflow-x: hidden;
+}
   /* none */
   .hambergur li:nth-child(1),
   .hambergur li:nth-child(2),

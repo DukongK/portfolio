@@ -50,6 +50,11 @@ $(function () {
     $(".menu_list").toggleClass("on");
   });
 
+  // 배경눌렀을 때도 메뉴리스트창이 오른쪽으로 슬라이드하면서 닫힌다
+  // $(".menu_wrap").on("click", function () {
+  //   $(this).fadeToggle();
+  // });
+
   $(".menu_txt li").on("mouseenter", function () {
     let menu_li = $(this).index();
     $(".menu_txt ul li div").eq(menu_li).addClass("on");
